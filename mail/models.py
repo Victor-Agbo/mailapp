@@ -3,7 +3,9 @@ from django.db import models
 
 
 class User(AbstractUser):
-    pass
+    def __str__(self) -> str:
+        return self.username
+        
 
 
 class Email(models.Model):
